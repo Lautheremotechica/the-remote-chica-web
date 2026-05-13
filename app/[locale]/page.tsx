@@ -24,15 +24,19 @@ export default async function LocalePage({ params }: PageProps) {
   return (
     <main className="min-h-screen">
       <Navbar locale={locale as Locale} />
-      <HeroSection locale={locale as Locale} />
-      <AboutSection locale={locale as Locale} />
-      <SocialProofSection locale={locale as Locale} />
-      <ServicesSection locale={locale as Locale} />
-      <WorkshopForm locale={locale as Locale} />
-      <SpeakerForm locale={locale as Locale} />
-      <CollaborationForm locale={locale as Locale} />
-      <FAQSection locale={locale as Locale} />
-      <Footer locale={locale as Locale} />
+      <div className="space-y-20">
+        <HeroSection locale={locale as Locale} />
+        <AboutSection locale={locale as Locale} />
+        <SocialProofSection locale={locale as Locale} />
+        <ServicesSection locale={locale as Locale} />
+        <WorkshopForm locale={locale as Locale} />
+        <SpeakerForm locale={locale as Locale} />
+        <CollaborationForm locale={locale as Locale} />
+        <FAQSection locale={locale as Locale} />
+      </div>
+      <div className="mt-24">
+        <Footer locale={locale as Locale} />
+      </div>
     </main>
   );
 }

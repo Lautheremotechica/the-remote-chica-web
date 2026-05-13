@@ -14,8 +14,8 @@ export function HeroSection({ locale }: HeroSectionProps) {
   
   return (
     <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-brand-cream via-white to-brand-blue/5">
-      <div className="section-container py-32">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="section-container py-44">
+        <div className="grid md:grid-cols-2 gap-20 items-center">
           {/* Left Content */}
           <div>
             <div className="inline-block">
@@ -28,11 +28,11 @@ export function HeroSection({ locale }: HeroSectionProps) {
               {t.hero.title}
             </h1>
             
-            <p className="mt-6 text-xl md:text-2xl text-gray-600 leading-relaxed">
+            <p className="mt-8 text-xl md:text-2xl text-gray-600 leading-loose">
               {t.hero.subtitle}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mt-16">
+            <div className="flex flex-col sm:flex-row gap-4 mt-20">
               <Button 
                 variant="primary" 
                 size="lg"
@@ -52,7 +52,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
             </div>
             
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-12 mt-20 border-t border-gray-200">
+            <div className="grid grid-cols-3 gap-8 pt-14 mt-24 border-t border-gray-200">
               <div>
                 <div className="text-3xl font-bold text-brand-blue">1000+</div>
                 <div className="text-sm text-gray-600">{t.socialProof.stats.students}</div>

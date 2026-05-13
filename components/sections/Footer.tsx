@@ -12,9 +12,9 @@ export function Footer({ locale }: FooterProps) {
   const otherLocale = locale === 'es' ? 'en' : 'es';
   
   return (
-    <footer className="bg-gray-900 text-white py-20">
+    <footer className="bg-gray-900 text-white py-24 border-t-4 border-brand-pink/30">
       <div className="section-container">
-        <div className="grid md:grid-cols-3 gap-16">
+        <div className="grid md:grid-cols-3 gap-20">
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-brand-blue to-brand-pink bg-clip-text text-transparent">
@@ -86,7 +86,7 @@ export function Footer({ locale }: FooterProps) {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-16 pt-10 text-center text-gray-400 text-sm">
+        <div className="border-t border-gray-800 mt-20 pt-10 text-center text-gray-400 text-sm">
           {t.footer.copyright}
         </div>
       </div>

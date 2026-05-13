@@ -14,17 +14,17 @@ export function FAQSection({ locale }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   
   return (
-    <section id="faq" className="py-28 bg-white">
+    <section id="faq" className="py-40 bg-white">
       <div className="section-container">
         <div className="max-w-3xl mx-auto">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-20">
               {t.faq.title}
             </h2>
           </FadeIn>
           
           <FadeIn delay={150}>
-          <div className="space-y-5">
+          <div className="space-y-6">
             {t.faq.items.map((item, index) => (
               <div 
                 key={index}
@@ -32,7 +32,7 @@ export function FAQSection({ locale }: FAQSectionProps) {
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                  className="w-full px-8 py-7 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                 >
                   <span className="font-semibold text-gray-900 pr-8">
                     {item.question}
@@ -50,7 +50,7 @@ export function FAQSection({ locale }: FAQSectionProps) {
                 </button>
                 
                 {openIndex === index && (
-                  <div className="px-8 pb-8 pt-2 text-gray-600 leading-relaxed">
+                  <div className="px-8 pb-10 pt-4 text-gray-600 leading-loose">
                     {item.answer}
                   </div>
                 )}

@@ -63,15 +63,15 @@ export function CollaborationForm({ locale }: CollaborationFormProps) {
   ];
   
   return (
-    <section id="colaboraciones" className="py-28 bg-gradient-to-b from-brand-cream/20 to-white">
+    <section id="colaboraciones" className="py-40 bg-gradient-to-b from-brand-cream/20 to-white">
       <div className="section-container">
         <FadeIn>
           <Card className="max-w-2xl mx-auto" padding="lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10">
             {t.forms.collaboration.title}
           </h2>
           
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-10">
             <Input
               label={t.forms.collaboration.name}
               {...register('name')}
