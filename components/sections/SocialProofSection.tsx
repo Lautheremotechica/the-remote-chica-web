@@ -74,15 +74,46 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
         
         {/* Social proof logos section */}
         <div className="mt-28 text-center">
-          <p className="text-sm text-gray-500 mb-12 uppercase tracking-wide">
-            {locale === 'es' ? 'Han confiado en mí' : 'Featured in'}
+          <p className="text-sm text-gray-400 mb-14 uppercase tracking-widest font-medium">
+            {locale === 'es' ? 'Han confiado en mí' : 'Trusted by'}
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
-            {/* Placeholder for company/university logos */}
-            <div className="h-12 w-32 bg-gray-200 rounded"></div>
-            <div className="h-12 w-32 bg-gray-200 rounded"></div>
-            <div className="h-12 w-32 bg-gray-200 rounded"></div>
-            <div className="h-12 w-32 bg-gray-200 rounded"></div>
+          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+            {[
+              { src: '/images/logos/cecar.png', alt: 'CECAR – Corporación Universitaria del Caribe', invert: false },
+              { src: '/images/logos/bayswater.png', alt: 'Bayswater Education', invert: false },
+              { src: '/images/logos/simera.svg', alt: 'Simera', invert: false },
+              { src: '/images/logos/interfell.png', alt: 'Interfell', invert: true },
+              { src: '/images/logos/worldteams.svg', alt: 'WorldTeams', invert: false },
+              { src: '/images/logos/theacareer.png', alt: 'The A Career', invert: false },
+            ].map((logo) => (
+              <div
+                key={logo.alt}
+                className="flex items-center justify-center h-12 transition-all duration-300 group"
+                style={{ width: '140px' }}
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="max-h-12 w-auto object-contain transition-all duration-300"
+                  style={{
+                    filter: logo.invert
+                      ? 'invert(1) grayscale(1) opacity(0.55)'
+                      : 'grayscale(1) opacity(0.55)',
+                    maxWidth: '140px',
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLImageElement).style.filter = logo.invert
+                      ? 'invert(1) grayscale(0) opacity(1)'
+                      : 'grayscale(0) opacity(1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLImageElement).style.filter = logo.invert
+                      ? 'invert(1) grayscale(1) opacity(0.55)'
+                      : 'grayscale(1) opacity(0.55)';
+                  }}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
