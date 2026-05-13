@@ -12,12 +12,21 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
   const t = translations[locale];
   
   // Google Drive testimonial videos
-  const testimonials = [
+  const videos = [
     {
-      id: '1',
-      name: 'Testimonio 1',
-      // These will need to be embedded from the Google Drive folder
-      videoUrl: 'https://drive.google.com/drive/u/0/folders/1SCRlxVax8F2mNo3gyIvaxyY-SCFvr7nJ',
+      id: '1biNsCMMEGWmpih8-gxhIdhMAXBUVUlYI',
+      name: 'Camila',
+      profile: 'Comunicadora',
+    },
+    {
+      id: '1DgahZ_vfKaHcQY55U3zdqno4xWo65png',
+      name: 'Santiago Osorio',
+      profile: '',
+    },
+    {
+      id: '195prILrY9KqoR5Vhs1dqtt6NPtwZZekd',
+      name: 'Ana Rivas',
+      profile: 'Analista de Licitaciones',
     },
   ];
   
@@ -26,7 +35,7 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
       <div className="section-container">
         <FadeIn className="text-center mb-24">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-            {t.socialProof.title}
+            {locale === 'es' ? 'Historias de éxito' : 'Success Stories'}
           </h2>
           <p className="text-xl text-gray-600 leading-loose">
             {locale === 'es' 
@@ -36,25 +45,27 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
           </p>
         </FadeIn>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {/* Testimonial placeholders - videos from Google Drive will be embedded */}
-          {[1, 2, 3].map((i) => (
-            <FadeIn key={i} delay={(i - 1) * 120}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {videos.map((video, index) => (
+            <FadeIn key={video.id} delay={index * 120}>
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                  <div className="text-gray-400">
-                    <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
-                    </svg>
-                  </div>
+                <div className="aspect-video bg-gray-100 relative w-full">
+                  <iframe 
+                    src={`https://drive.google.com/file/d/${video.id}/preview`} 
+                    className="absolute top-0 left-0 w-full h-full border-0"
+                    allow="autoplay" 
+                    allowFullScreen
+                  ></iframe>
                 </div>
-                <div className="p-10">
-                  <p className="text-gray-600 italic leading-loose">
-                    {locale === 'es' 
-                      ? `"Video testimonio ${i}"`
-                      : `"Video testimonial ${i}"`
-                    }
-                  </p>
+                <div className="p-8">
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {video.name}
+                  </h3>
+                  {video.profile && (
+                    <p className="text-gray-600 mt-2">
+                      {video.profile}
+                    </p>
+                  )}
                 </div>
               </div>
             </FadeIn>
