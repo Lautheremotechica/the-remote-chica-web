@@ -35,9 +35,9 @@
   --color-brand-cream: var(--color-cream);
 }
 
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -57,13 +57,16 @@ body {
 /* Utility classes */
 .section-container {
   max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 @media (min-width: 768px) {
   .section-container {
-    padding: 0 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
