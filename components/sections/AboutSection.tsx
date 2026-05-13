@@ -12,7 +12,7 @@ export function AboutSection({ locale }: AboutSectionProps) {
   const t = translations[locale];
   
   return (
-    <section id="about" className="py-44 bg-white border-t border-gray-100">
+    <section id="about" className="pt-6 pb-6 bg-white border-t border-gray-100">
       <div className="section-container">
         <FadeIn className="max-w-4xl mx-auto text-center space-y-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10">

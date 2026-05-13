@@ -14,7 +14,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
   
   return (
     <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-brand-cream via-white to-brand-blue/5">
-      <div className="section-container py-44">
+      <div className="section-container pt-32 pb-6">
         <div className="grid md:grid-cols-2 gap-20 items-center">
           {/* Left Content */}
           <div>

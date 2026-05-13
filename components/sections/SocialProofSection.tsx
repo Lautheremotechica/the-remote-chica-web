@@ -22,7 +22,7 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
   ];
   
   return (
-    <section id="testimonials" className="py-40 bg-gradient-to-b from-white to-brand-cream/30">
+    <section id="testimonials" className="pt-6 pb-20 bg-gradient-to-b from-white to-brand-cream/30">
       <div className="section-container">
         <FadeIn className="text-center mb-24">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
