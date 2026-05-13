@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { translations, type TranslationKey } from '@/lib/i18n/translations';
 import { type Locale } from '@/lib/i18n/config';
 import { Button } from '@/components/ui/Button';
@@ -70,10 +71,14 @@ export function HeroSection({ locale }: HeroSectionProps) {
           {/* Right Image */}
           <div className="relative">
             <div className="relative aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-brand-blue to-brand-pink shadow-2xl">
-              {/* Placeholder for Laura's image */}
-              <div className="w-full h-full flex items-center justify-center text-white text-2xl font-bold">
-                [Photo]
-              </div>
+              <Image
+                src="/images/hero.jpg"
+                alt="Laura - The Remote Chica"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover object-top"
+                priority
+              />
             </div>
             
             {/* Decorative elements */}
