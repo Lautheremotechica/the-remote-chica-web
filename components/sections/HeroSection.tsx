@@ -14,25 +14,25 @@ export function HeroSection({ locale }: HeroSectionProps) {
   
   return (
     <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-brand-cream via-white to-brand-blue/5">
-      <div className="section-container py-20">
+      <div className="section-container py-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div>
             <div className="inline-block">
               <span className="px-4 py-2 bg-brand-pink/10 text-brand-pink rounded-full text-sm font-semibold">
                 The Remote Chica
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900">
+            <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900">
               {t.hero.title}
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
+            <p className="mt-6 text-xl md:text-2xl text-gray-600 leading-relaxed">
               {t.hero.subtitle}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <div className="flex flex-col sm:flex-row gap-4 mt-16">
               <Button 
                 variant="primary" 
                 size="lg"
@@ -52,7 +52,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
             </div>
             
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-12 mt-6 border-t border-gray-200">
+            <div className="grid grid-cols-3 gap-6 pt-8 mt-20 border-t border-gray-200">
               <div>
                 <div className="text-3xl font-bold text-brand-blue">1000+</div>
                 <div className="text-sm text-gray-600">{t.socialProof.stats.students}</div>
