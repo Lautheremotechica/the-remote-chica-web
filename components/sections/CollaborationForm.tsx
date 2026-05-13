@@ -10,6 +10,7 @@ import { type Locale } from '@/lib/i18n/config';
 import { Input, TextArea, Select } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { FadeIn } from '@/components/ui/FadeIn';
 
 interface CollaborationFormProps {
   locale: Locale;
@@ -64,7 +65,8 @@ export function CollaborationForm({ locale }: CollaborationFormProps) {
   return (
     <section id="colaboraciones" className="py-28 bg-gradient-to-b from-brand-cream/20 to-white">
       <div className="section-container">
-        <Card className="max-w-2xl mx-auto" padding="lg">
+        <FadeIn>
+          <Card className="max-w-2xl mx-auto" padding="lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
             {t.forms.collaboration.title}
           </h2>
@@ -120,7 +122,8 @@ export function CollaborationForm({ locale }: CollaborationFormProps) {
               {isSubmitting ? (locale === 'es' ? 'Enviando...' : 'Sending...') : t.forms.collaboration.submit}
             </Button>
           </form>
-        </Card>
+          </Card>
+        </FadeIn>
       </div>
     </section>
   );

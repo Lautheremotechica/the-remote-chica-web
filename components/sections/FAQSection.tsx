@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { translations } from '@/lib/i18n/translations';
 import { type Locale } from '@/lib/i18n/config';
+import { FadeIn } from '@/components/ui/FadeIn';
 
 interface FAQSectionProps {
   locale: Locale;
@@ -16,10 +17,13 @@ export function FAQSection({ locale }: FAQSectionProps) {
     <section id="faq" className="py-28 bg-white">
       <div className="section-container">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
-            {t.faq.title}
-          </h2>
+          <FadeIn>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
+              {t.faq.title}
+            </h2>
+          </FadeIn>
           
+          <FadeIn delay={150}>
           <div className="space-y-5">
             {t.faq.items.map((item, index) => (
               <div 
@@ -53,6 +57,7 @@ export function FAQSection({ locale }: FAQSectionProps) {
               </div>
             ))}
           </div>
+          </FadeIn>
         </div>
       </div>
     </section>

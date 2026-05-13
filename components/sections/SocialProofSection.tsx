@@ -2,6 +2,7 @@
 
 import { translations } from '@/lib/i18n/translations';
 import { type Locale } from '@/lib/i18n/config';
+import { FadeIn } from '@/components/ui/FadeIn';
 
 interface SocialProofSectionProps {
   locale: Locale;
@@ -23,7 +24,7 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
   return (
     <section id="testimonials" className="py-28 bg-gradient-to-b from-white to-brand-cream/30">
       <div className="section-container">
-        <div className="text-center mb-20">
+        <FadeIn className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {t.socialProof.title}
           </h2>
@@ -33,28 +34,30 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
               : 'People who transformed their careers with remote work'
             }
           </p>
-        </div>
+        </FadeIn>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Testimonial placeholders - videos from Google Drive will be embedded */}
           {[1, 2, 3].map((i) => (
-            <div key={i} className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                <div className="text-gray-400">
-                  <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
-                  </svg>
+            <FadeIn key={i} delay={(i - 1) * 120}>
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="aspect-video bg-gray-200 flex items-center justify-center">
+                  <div className="text-gray-400">
+                    <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <p className="text-gray-600 italic leading-relaxed">
+                    {locale === 'es' 
+                      ? `"Video testimonio ${i}"`
+                      : `"Video testimonial ${i}"`
+                    }
+                  </p>
                 </div>
               </div>
-              <div className="p-8">
-                <p className="text-gray-600 italic leading-relaxed">
-                  {locale === 'es' 
-                    ? `"Video testimonio ${i}"`
-                    : `"Video testimonial ${i}"`
-                  }
-                </p>
-              </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
         

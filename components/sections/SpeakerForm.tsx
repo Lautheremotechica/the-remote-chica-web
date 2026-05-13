@@ -10,6 +10,7 @@ import { type Locale } from '@/lib/i18n/config';
 import { Input, TextArea, Select } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { FadeIn } from '@/components/ui/FadeIn';
 
 interface SpeakerFormProps {
   locale: Locale;
@@ -63,7 +64,8 @@ export function SpeakerForm({ locale }: SpeakerFormProps) {
   return (
     <section id="speaker" className="py-28 bg-white">
       <div className="section-container">
-        <Card className="max-w-2xl mx-auto" padding="lg">
+        <FadeIn>
+          <Card className="max-w-2xl mx-auto" padding="lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
             {t.forms.speaker.title}
           </h2>
@@ -140,7 +142,8 @@ export function SpeakerForm({ locale }: SpeakerFormProps) {
               {isSubmitting ? (locale === 'es' ? 'Enviando...' : 'Sending...') : t.forms.speaker.submit}
             </Button>
           </form>
-        </Card>
+          </Card>
+        </FadeIn>
       </div>
     </section>
   );
