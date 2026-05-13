@@ -55,14 +55,14 @@ export function WorkshopForm({ locale }: WorkshopFormProps) {
   };
   
   return (
-    <section id="talleres" className="py-20 bg-gradient-to-b from-white to-brand-cream/20">
+    <section id="talleres" className="py-28 bg-gradient-to-b from-white to-brand-cream/20">
       <div className="section-container">
         <Card className="max-w-2xl mx-auto" padding="lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
             {t.forms.workshops.title}
           </h2>
           
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
             <Input
               label={t.forms.workshops.name}
               {...register('name')}

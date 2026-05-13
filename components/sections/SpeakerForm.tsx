@@ -61,14 +61,14 @@ export function SpeakerForm({ locale }: SpeakerFormProps) {
   ];
   
   return (
-    <section id="speaker" className="py-20 bg-white">
+    <section id="speaker" className="py-28 bg-white">
       <div className="section-container">
         <Card className="max-w-2xl mx-auto" padding="lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
             {t.forms.speaker.title}
           </h2>
           
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
             <Input
               label={t.forms.speaker.name}
               {...register('name')}

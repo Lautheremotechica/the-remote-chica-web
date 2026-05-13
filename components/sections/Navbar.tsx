@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { type Locale } from '@/lib/i18n/config';
 
@@ -11,14 +10,9 @@ export function Navbar({ locale }: NavbarProps) {
     <header className="sticky top-0 z-50 bg-brand-cream border-b border-brand-cream/80 shadow-sm">
       <div className="section-container py-5 flex items-center justify-center">
         <Link href={`/${locale}`} className="inline-flex items-center">
-          <Image
-            src="/images/logo.png"
-            alt="The Remote Chica"
-            width={320}
-            height={96}
-            className="h-20 w-auto object-contain"
-            priority
-          />
+          <span className="font-bold text-2xl tracking-tight text-brand-pink">
+            The Remote Chica
+          </span>
         </Link>
       </div>
     </header>

@@ -11,13 +11,13 @@ export function AboutSection({ locale }: AboutSectionProps) {
   const t = translations[locale];
   
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-32 bg-white">
       <div className="section-container">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             {t.about.title}
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 leading-loose">
             {t.about.description}
           </p>
         </div>

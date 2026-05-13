@@ -21,13 +21,13 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
   ];
   
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-b from-white to-brand-cream/30">
+    <section id="testimonials" className="py-28 bg-gradient-to-b from-white to-brand-cream/30">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {t.socialProof.title}
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 leading-relaxed">
             {locale === 'es' 
               ? 'Personas que transformaron su carrera con trabajo remoto'
               : 'People who transformed their careers with remote work'
@@ -35,7 +35,7 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Testimonial placeholders - videos from Google Drive will be embedded */}
           {[1, 2, 3].map((i) => (
             <div key={i} className="bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -46,8 +46,8 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
                   </svg>
                 </div>
               </div>
-              <div className="p-6">
-                <p className="text-gray-600 italic">
+              <div className="p-8">
+                <p className="text-gray-600 italic leading-relaxed">
                   {locale === 'es' 
                     ? `"Video testimonio ${i}"`
                     : `"Video testimonial ${i}"`
@@ -59,8 +59,8 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
         </div>
         
         {/* Social proof logos section */}
-        <div className="mt-20 text-center">
-          <p className="text-sm text-gray-500 mb-8 uppercase tracking-wide">
+        <div className="mt-24 text-center">
+          <p className="text-sm text-gray-500 mb-10 uppercase tracking-wide">
             {locale === 'es' ? 'Han confiado en mí' : 'Featured in'}
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
