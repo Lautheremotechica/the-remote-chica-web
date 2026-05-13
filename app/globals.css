@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@source "../app/**/*.{ts,tsx,mdx}";
+@source "../components/**/*.{ts,tsx,mdx}";
+@source "../pages/**/*.{ts,tsx,mdx}";
+
 :root {
   /* Brand Colors */
   --color-blue: #34bae3;
