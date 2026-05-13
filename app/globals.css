@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --color-blue: #34bae3;
+  --color-pink: #c73960;
+  --color-orange: #f59321;
+  --color-blue-medium: #648dc9;
+  --color-cream: #fbe6ce;
+  
+  /* Neutral */
+  --color-white: #ffffff;
+  --color-black: #1a1a1a;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-700: #374151;
+  --color-gray-900: #111827;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Custom brand colors */
+  --color-brand-blue: var(--color-blue);
+  --color-brand-pink: var(--color-pink);
+  --color-brand-orange: var(--color-orange);
+  --color-brand-blue-medium: var(--color-blue-medium);
+  --color-brand-cream: var(--color-cream);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-black);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility classes */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    padding: 0 2rem;
+  }
+}
