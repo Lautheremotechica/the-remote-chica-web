@@ -1,4 +1,5 @@
 import { locales, type Locale } from '@/lib/i18n/config';
+import { Navbar } from '@/components/sections/Navbar';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { SocialProofSection } from '@/components/sections/SocialProofSection';
@@ -22,6 +23,7 @@ export default async function LocalePage({ params }: PageProps) {
   
   return (
     <main className="min-h-screen">
+      <Navbar locale={locale as Locale} />
       <HeroSection locale={locale as Locale} />
       <AboutSection locale={locale as Locale} />
       <SocialProofSection locale={locale as Locale} />
