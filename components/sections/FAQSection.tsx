@@ -14,7 +14,7 @@ export function FAQSection({ locale }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   
   return (
-    <section id="faq" className="py-40 bg-white">
+    <section id="faq" className="py-40 bg-white border-t border-gray-100">
       <div className="section-container">
         <div className="max-w-3xl mx-auto">
           <FadeIn>

@@ -16,7 +16,7 @@ export function ServicesSection({ locale }: ServicesSectionProps) {
   const t = translations[locale];
   
   return (
-    <section id="services" className="py-40 bg-white">
+    <section id="services" className="py-40 bg-white border-t border-gray-100">
       <div className="section-container">
         <FadeIn className="text-center mb-24">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">

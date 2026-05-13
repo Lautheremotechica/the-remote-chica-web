@@ -62,7 +62,7 @@ export function SpeakerForm({ locale }: SpeakerFormProps) {
   ];
   
   return (
-    <section id="speaker" className="py-40 bg-white">
+    <section id="speaker" className="py-40 bg-white border-t border-gray-100">
       <div className="section-container">
         <FadeIn>
           <Card className="max-w-2xl mx-auto" padding="lg">

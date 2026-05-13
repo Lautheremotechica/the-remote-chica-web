@@ -66,3 +66,15 @@ body {
     padding: 0 4rem;
   }
 }
+
+/* Section separator: visible gap between same-background sections */
+.section-gap {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* Decorative divider line between sections */
+.section-divider {
+  border-top: 1px solid #e5e7eb;
+  margin: 0;
+}
