@@ -17,16 +17,19 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
       id: '1u8nk2LOLCJZNst6eWrvAFbPH4eQRCoZD',
       name: 'Daniela Fernandez',
       profile: 'Abogada',
+      aspectRatio: '16/9',
     },
     {
       id: '1DgahZ_vfKaHcQY55U3zdqno4xWo65png',
       name: 'Santiago Osorio',
       profile: '',
+      aspectRatio: '4/5',
     },
     {
       id: '195prILrY9KqoR5Vhs1dqtt6NPtwZZekd',
       name: 'Ana Rivas',
       profile: 'Analista de Licitaciones',
+      aspectRatio: '4/5',
     },
   ];
   
@@ -49,7 +52,7 @@ export function SocialProofSection({ locale }: SocialProofSectionProps) {
           {videos.map((video, index) => (
             <FadeIn key={video.id} delay={index * 120}>
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="bg-gray-100 relative w-full overflow-hidden" style={{ aspectRatio: '4/5' }}>
+                <div className="bg-gray-100 relative w-full overflow-hidden" style={{ aspectRatio: video.aspectRatio }}>
                   <iframe 
                     src={`https://drive.google.com/file/d/${video.id}/preview`} 
                     className="absolute top-0 left-0 w-full h-full border-0"
